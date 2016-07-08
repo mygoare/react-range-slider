@@ -18,7 +18,8 @@ gulp.task('sass', function() {
         includePaths: require('eggshell').includePaths
     }))
     .pipe(gulp.dest(root + '/build'))
-    .pipe($.size());
+    .pipe($.size())
+    .pipe(connect.reload());
 });
 
 // index.html
@@ -26,6 +27,7 @@ gulp.task('index', function(){
   return gulp.src(root + '/index.html')
   .pipe(gulp.dest(root + '/build'))
   .pipe($.size())
+  .pipe(connect.reload());
 })
 
 // Reactjs jsx file
@@ -39,7 +41,8 @@ gulp.task('browserify', function() {
       console.log(e)
       this.emit('end');
     }).pipe(gulp.dest(root + '/build/'))
-    .pipe($.size());
+    .pipe($.size())
+    .pipe(connect.reload());
 });
 
 // Connect
