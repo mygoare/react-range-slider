@@ -4,9 +4,10 @@
   "description": "A flexible slider for reactjs.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jest",
-    "watch": "./node_modules/.bin/gulp watch --gulpfile example/gulpfile.js",
-    "deploy": "./node_modules/.bin/gulp deploy --gulpfile example/gulpfile.js"
+    "test": "jest",
+    "watch": "gulp watch --gulpfile example/gulpfile.js",
+    "deploy": "gulp deploy --gulpfile example/gulpfile.js",
+    "build": "gulp build --gulpfile example/gulpfile.js"    
   },
   "repository": {
     "type": "git",

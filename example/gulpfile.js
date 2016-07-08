@@ -43,7 +43,7 @@ gulp.task('browserify', function() {
 });
 
 // Connect
-gulp.task('connect', function() {
+gulp.task('connect', ['build'], function() {
   connect.server({
     root: 'build',
     livereload: true
